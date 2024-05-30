@@ -9,7 +9,7 @@ const city='Bucuresti'
 const livingAdress='Sector 3, Strada Nicolae Grigorescu';
 const zipCode='033400'
 describe('Registration test', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit(baseUrl)
   })
     it('Registering with valid credentials', () => {

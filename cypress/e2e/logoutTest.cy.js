@@ -1,13 +1,11 @@
 const baseUrl="https://automationteststore.com/"
-const { faker } = require('@faker-js/faker');
 const loginName="Nella.Swaniawski1996";
 const password="Password11!!";
 describe('Modifying account name', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit(baseUrl)
   })
     it('Change user name', () => {
-  // this is the part that logs in 
   cy.get('#customer_menu_top > li > a').click();
   cy.get('#loginFrm_loginname').type(loginName);
   cy.get('#loginFrm_password').type(password);

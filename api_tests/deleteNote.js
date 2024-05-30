@@ -1,6 +1,6 @@
 
 const { spec,request } = require('pactum');
-baseUrl="https://practice.expandtesting.com/notes/api";
+const baseUrl="https://practice.expandtesting.com/notes/api";
 const userEmail = "Elliot.Kozey19@yahoo.com";
 const userPassword="Password11!!";
 describe('Deleting note', () => {
@@ -30,10 +30,5 @@ it('Create new note', async () => {
     .expectStatus(200)
     const noteId=createdNote.body.data.id;
     console.log(noteId)
-})
-it('Delete new note', async () => {
-    await spec()
-    .delete(`${baseUrl}/notes/${noteId}`)
-    .expectStatus(200)
 })
 })

@@ -1,6 +1,6 @@
 const { spec,request } = require('pactum');
 const { faker } = require('@faker-js/faker');
-baseUrl="https://practice.expandtesting.com/notes/api";
+const baseUrl="https://practice.expandtesting.com/notes/api";
 const randomName = faker.person.fullName();
 const randomEmail = faker.internet.email();
 console.log(randomName);
@@ -21,7 +21,7 @@ it('Register user with valid credentials', async () => {
     )
     .expectStatus(201)
 })
-it('Register user with invalid credentials - NOK Password', async () => {
+it('Try register user with invalid credentials', async () => {
     await spec()
     .post(`${baseUrl}/users/register`)
     .withBody(

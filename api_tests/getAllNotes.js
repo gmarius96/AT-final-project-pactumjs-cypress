@@ -1,9 +1,9 @@
 
 const { spec,request } = require('pactum');
-baseUrl="https://practice.expandtesting.com/notes/api";
+const baseUrl="https://practice.expandtesting.com/notes/api";
 const userEmail = "Elliot.Kozey19@yahoo.com";
 const userPassword="Password11!!";
-const availableNotes = require("../data/notesSchema.json");
+const availableNotes = require("../api_tests/get-notes-schema.json");
 describe('Obtaining token', () => {
     let tokenId=""
         beforeEach(async () => {

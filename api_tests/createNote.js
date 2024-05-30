@@ -1,6 +1,6 @@
 
 const { spec,request } = require('pactum');
-baseUrl="https://practice.expandtesting.com/notes/api";
+const baseUrl="https://practice.expandtesting.com/notes/api";
 const userEmail = "Elliot.Kozey19@yahoo.com";
 const userPassword="Password11!!";
 describe('Creating new note', () => {
